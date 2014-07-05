@@ -22,5 +22,5 @@
 </div>
 
 <ul class="list-group" id="contact-list">
-  <contacto ng-repeat="contact in contacts" descripcion-contacto="contact"></contacto>
+  <contacto ng-show="contact.show" ng-repeat="contact in contacts" descripcion-contacto="contact" on-close="hideDialog(contact)"></contacto>
 </ul>

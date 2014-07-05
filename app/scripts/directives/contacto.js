@@ -15,7 +15,8 @@ angular.module('origamiDirectivasApp')
       },
       restrict: 'E',
       scope:{
-        informacionContacto:'=descripcionContacto'
+        informacionContacto:'=descripcionContacto',
+        close:'&onClose'
       },
       link: function postLink(scope, element, attrs) {
 
