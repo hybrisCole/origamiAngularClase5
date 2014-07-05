@@ -9,16 +9,17 @@
 angular.module('origamiDirectivasApp')
   .directive('contacto', function () {
     return {
-      templateUrl:'templates/contactoTemplate.html',
+      templateUrl:function(elem,attrs){
+        console.log(attrs);
+        return 'templates/contactoTemplate.html';
+      },
       restrict: 'E',
       scope:{
-        informacionContacto:'=descripcionContacto',
-        hola:'='
+        informacionContacto:'=descripcionContacto'
       },
       link: function postLink(scope, element, attrs) {
-        element.click(function(ev){
-          alert('Hola Desde La Directiva');
-        });
+
       }
     };
   });
+
