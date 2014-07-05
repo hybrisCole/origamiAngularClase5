@@ -61,7 +61,7 @@ angular.module('origamiDirectivasApp')
     ];
 
     $scope.hideDialog = function(contact){
-      contact.show = false;
+      //contact.show = false;
     };
 
   });

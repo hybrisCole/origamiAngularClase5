@@ -16,10 +16,20 @@ angular.module('origamiDirectivasApp')
       restrict: 'E',
       scope:{
         informacionContacto:'=descripcionContacto',
-        close:'&onClose'
+        close:'&onClose',
+        modalInformation:'=modalInfo'
       },
-      link: function postLink(scope, element, attrs) {
+      link: function(scope, element, attrs) {
 
+      },
+      controller:function($scope){
+        $scope.displayData = true;
+        $scope.hideData = function(){
+          $scope.displayData = false;
+        };
+        $scope.showData = function(){
+          $scope.displayData = true;
+        };
       }
     };
   });

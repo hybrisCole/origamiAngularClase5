@@ -1,16 +1,18 @@
 <li class="list-group-item">
-  <div class="col-xs-12 col-sm-3">
+  <div class="col-xs-12 col-sm-3" ng-show="displayData">
     <img ng-src="{{informacionContacto.picture}}" alt="{{informacionContacto.name}}" class="img-responsive img-circle" />
   </div>
-  <div class="col-xs-12 col-sm-9">
+  <div class="col-xs-12 col-sm-9" ng-show="displayData">
     <span class="name">{{informacionContacto.name}} </span><br/>
     <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5842 Hillcrest Rd"></span>
     <span class="visible-xs"> <span class="text-muted">5842 Hillcrest Rd</span><br/></span>
     <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="(870) 288-4149"></span>
     <span class="visible-xs"> <span class="text-muted">(870) 288-4149</span><br/></span>
     <a ng-href= "mailto:{{informacionContacto.mail}}"><span class="glyphicon glyphicon-send text-muted c-info" data-toggle="tooltip" title="(870) 288-4149"></span></a>
-    <span class="glyphicon glyphicon-minus text-muted c-info" ng-click="close()"></span>
-
+    <span class="glyphicon glyphicon-minus text-muted c-info" ng-click="close();hideData()"></span>
+  </div>
+  <div class="col-xs-12 col-sm-9" ng-hide="displayData">
+    <span class="glyphicon glyphicon-plus text-muted c-info" ng-click="showData()"></span>
   </div>
   <div class="clearfix"></div>
 </li>
